@@ -1,10 +1,3 @@
-
-#Importo Flask
-from flask import Flask
-
-#Importar libreria os
-import os
-
 #Importar funcion que crea la app
 from main import create_app
 import os
