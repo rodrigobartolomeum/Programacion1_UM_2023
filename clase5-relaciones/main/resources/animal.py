@@ -14,7 +14,7 @@ class Animal(Resource): #A la clase animal le indico que va a ser del tipo recur
     #obtener recurso
     def get(self, id):
         animal = db.session.query(AnimalModel).get_or_404(id)
-        return animal.to_json()
+        return animal.to_json_complete()
 
     #eliminar recurso
     def delete(self, id):

@@ -1,4 +1,5 @@
 from .. import db
+import json
 
 class Animal(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -13,6 +14,15 @@ class Animal(db.Model):
         animal_json = {
             'id': self.id,
             'raza': str(self.raza),
+        }
+        return animal_json
+    
+    def to_json_complete(self):
+        historias = [historia.to_json() for historia in self.historias]
+        animal_json = {
+            'id': self.id,
+            'raza': str(self.raza),
+            'historias':historias
 
         }
         return animal_json
