@@ -1,7 +1,7 @@
 from flask_restful import Resource
 from flask import request, jsonify
 from .. import db
-from main.models import AnimalModel, HistoriaClinicaModel
+from main.models import AnimalModel, HistoriaClinicaModel, ExhibicionesModel, animales_exhibiciones
 from sqlalchemy import func, desc
 
 # #Datos de prueba en JSON
@@ -83,7 +83,15 @@ class Animales(Resource):
 
     #insertar recurso
     def post(self):
+        exhibiciones_ids = request.get_json().get('exhibiciones')
         animal = AnimalModel.from_json(request.get_json())
+        
+        if exhibiciones_ids:
+            # Obtener las instancias de Exhibicion basadas en las ids recibidas
+            exhibiciones = ExhibicionesModel.query.filter(ExhibicionesModel.id.in_(exhibiciones_ids)).all()
+            # Agregar las instancias de Exhibicion a la lista de exhibiciones del Animal
+            animal.exhibiciones.extend(exhibiciones)
+            
         db.session.add(animal)
         db.session.commit()
         return animal.to_json(), 201

@@ -7,10 +7,12 @@ from flask_restful import Api #Agrego la clase API
 
 #Importar SQLAlchemy
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 #Inicializar API de Flask Restful
 api = Api()
 #Inicializar SQLAlchemy
 db = SQLAlchemy()
+migrate = Migrate()
 
 def create_app():
     app = Flask(__name__)
@@ -24,6 +26,7 @@ def create_app():
     #Url de configuración de base de datos
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////'+os.getenv('DATABASE_PATH')+os.getenv('DATABASE_NAME')
     db.init_app(app)
+    migrate.init_app(app,db)
 
     #Importar directorio de recursos
     import main.resources as resources
@@ -34,6 +37,8 @@ def create_app():
     api.add_resource(resources.AnimalResource, '/animal/<id>')
     api.add_resource(resources.HistoriasClinicasResource, '/historias')
     api.add_resource(resources.HistoriaClinicaResource, '/historia/<id>')
+    api.add_resource(resources.ExhibicionesResource, '/exhibiciones')
+    api.add_resource(resources.ExhibicionResource, '/exhibicion/<id>')
     
     
     
