@@ -44,7 +44,7 @@ def register():
             #Agregar animal a DB
             db.session.add(animal)
             db.session.commit()
-             #Enviar mail de bienvenida
+            #Enviar mail de bienvenida
             sent = sendMail([animal.email],"Welcome!",'register',animal = animal)
         except Exception as error:
             db.session.rollback()
