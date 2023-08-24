@@ -1,0 +1,66 @@
+/* Establecer el fondo de imagen */
+.background-image {
+    background-image: url('gym-background.jpg'); /* Reemplaza con la ruta de tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 100px 0; /* Agregar un espacio arriba y abajo */
+}
+
+/* Ajustar estilos de los cards */
+.card {
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+/* Cambiar el color del texto de las cards */
+.card-title {
+    color: #333;
+}
+
+.card-text {
+    color: #777;
+}
+
+/* Estilos para el footer */
+.footer {
+    text-align: center;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ccc;
+}
+
+.welcome-text {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.welcome-text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.8), transparent);
+    transform-origin: 100% 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.welcome-text:hover::before {
+    transform: scaleX(1);
+}
+
+.welcome-text h1 {
+    -webkit-text-stroke: 1px black; /* Borde negro de 2px */
+    color: transparent; /* Hace que el texto sea transparente */
+}

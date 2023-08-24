@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio App</title>
+    <!-- Bootstrap --->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+     <!-- font-awesome (iconos)-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        
+     <!-- Style propios -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-dumbbell fa-2x"></i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Iniciar sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="usuarios.html">Usuarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="planificaciones.html">Planificaciones</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">
+                            <i class="fa-solid fa-user"></i> Iniciar Sesión
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="background-image">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center welcome-text">
+                    <h1 class="text-white">¡Bienvenido al Gimnasio!</h1>
+                    <p class="lead text-white">Tu lugar para ponerte en forma y llevar un estilo de vida saludable.</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="css/clase1.jpg" class="card-img-top" alt="Clase 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Clase de Yoga</h5>
+                            <p class="card-text">Encuentra la tranquilidad y el equilibrio en nuestras clases de yoga.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="css/clase2.jpg" class="card-img-top" alt="Clase 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Entrenamiento Funcional</h5>
+                            <p class="card-text">Mejora tu fuerza y resistencia con nuestro entrenamiento funcional.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="css/clase3.jpg" class="card-img-top" alt="Clase 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Clase de Baile</h5>
+                            <p class="card-text">Baila y diviértete mientras quemas calorías en nuestras clases de baile.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer py-3 bg-light fixed-bottom">
+        <div class="container text-center">
+            <div class="col-md-6 d-flex align-items-center">
+                <span class="text-muted">© 2023 Gimnasio App.</span>
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-twitter fa-2x"></i></a></li>
+                    <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-square-instagram fa-2x"></i></a></li>
+                    <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-facebook fa-2x"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
