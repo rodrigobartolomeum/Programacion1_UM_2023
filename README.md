@@ -1,6 +1,7 @@
-# Programacion 1 UM 2023
+# Programación 1 UM 2023
 Repositorio de apoyo a la cátedra Programación I.
 
+# Back
 ## Instalación
 Crear un archivo .env utilizar de ejemplo .env-example
 
@@ -8,3 +9,7 @@ Ejecutar install.sh
 
 ## Servidor
 Ejecutar boot.sh
+
+# Front
+## Instalación (clase 12 Angular)
+1- Ir a la ubicación clase-12-angular/app_gym2- npm install3- ng serve -o
