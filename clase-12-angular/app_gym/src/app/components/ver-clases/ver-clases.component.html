@@ -1,0 +1,42 @@
+<button class="btn btn-primary" (click)="verClases()">VerClases</button>
+<button class="btn btn-primary" (click)="ocultarClases()">OcultarClases</button>
+<div *ngIf="varVerClases" class="row mt-5">
+    
+        <div class="col-md-4" *ngFor="let clase of arrayClases;index as i">
+            <div class="card">
+                <img [src]="'assets/clase'+(i+1)+'.jpg'" class="card-img-top" alt="Clase 1">
+                <div class="card-body">
+                    <h5 class="card-title">{{i}} - {{clase.titulo}}</h5>
+                    <p class="card-text">{{clase.descripcion}}</p>
+                </div>
+            </div>
+        </div>
+    
+    <!-- <div class="col-md-4">
+        <div class="card">
+            <img src="assets/clase1.jpg" class="card-img-top" alt="Clase 1">
+            <div class="card-body">
+                <h5 class="card-title">Clase de Yoga</h5>
+                <p class="card-text">Encuentra la tranquilidad y el equilibrio en nuestras clases de yoga.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="assets/clase2.jpg" class="card-img-top" alt="Clase 2">
+            <div class="card-body">
+                <h5 class="card-title">Entrenamiento Funcional</h5>
+                <p class="card-text">Mejora tu fuerza y resistencia con nuestro entrenamiento funcional.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="assets/clase3.jpg" class="card-img-top" alt="Clase 3">
+            <div class="card-body">
+                <h5 class="card-title">Clase de Baile</h5>
+                <p class="card-text">Baila y diviértete mientras quemas calorías en nuestras clases de baile.</p>
+            </div>
+        </div>
+    </div> -->
+</div>
