@@ -12,4 +12,6 @@ Ejecutar boot.sh
 
 # Front
 ## Instalación (clase 12 Angular)
-1- Ir a la ubicación clase-12-angular/app_gym2- npm install3- ng serve -o
+1- Ir a la ubicación clase-12-angular/app_gym  
+2- npm install  
+3- ng serve -o
