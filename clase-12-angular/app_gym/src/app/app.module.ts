@@ -11,6 +11,8 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { VerClasesComponent } from './components/ver-clases/ver-clases.component';
+import { VerUserComponent } from './components/usuarios/ver-user/ver-user.component';
+import { VerPlanificacionesComponent } from './components/planificaciones/ver-planificaciones/ver-planificaciones.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { VerClasesComponent } from './components/ver-clases/ver-clases.component
     ErrorPageComponent,
     NavComponent,
     FooterComponent,
-    VerClasesComponent
+    VerClasesComponent,
+    VerUserComponent,
+    VerPlanificacionesComponent
   ],
   imports: [
     BrowserModule,
