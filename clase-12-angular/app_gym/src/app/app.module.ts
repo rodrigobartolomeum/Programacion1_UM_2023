@@ -13,6 +13,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { VerClasesComponent } from './components/ver-clases/ver-clases.component';
 import { VerUserComponent } from './components/usuarios/ver-user/ver-user.component';
 import { VerPlanificacionesComponent } from './components/planificaciones/ver-planificaciones/ver-planificaciones.component';
+import { AbmComponent } from './components/usuarios/abm/abm.component';
+import { UsuarioComponent } from './pages/usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { VerPlanificacionesComponent } from './components/planificaciones/ver-pl
     FooterComponent,
     VerClasesComponent,
     VerUserComponent,
-    VerPlanificacionesComponent
+    VerPlanificacionesComponent,
+    AbmComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
