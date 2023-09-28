@@ -9,7 +9,7 @@
         <div *ngIf="verRutas" class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/usuarios">Usuarios</a>
+                    <a *ngIf="isToken" class="nav-link" routerLink="/usuarios">Usuarios</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/planificaciones">Planificaciones</a>
@@ -19,8 +19,11 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul *ngIf="verRutas" class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/login">
+                    <a *ngIf="!isToken" class="nav-link" routerLink="/login">
                         <i class="fa-solid fa-user"></i> Iniciar Sesión
+                    </a>
+                    <a *ngIf="isToken" class="nav-link" href="?" (click)="cerrarSesion()">
+                        <i class="fa-solid fa-user"></i> Cerrar Sesión
                     </a>
                 </li>
             </ul>

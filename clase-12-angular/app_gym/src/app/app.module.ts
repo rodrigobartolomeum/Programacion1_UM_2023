@@ -16,6 +16,9 @@ import { VerPlanificacionesComponent } from './components/planificaciones/ver-pl
 import { AbmComponent } from './components/usuarios/abm/abm.component';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
 
+import { HttpClientModule } from '@angular/common/http'
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +37,10 @@ import { UsuarioComponent } from './pages/usuario/usuario.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
