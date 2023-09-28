@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-//import { Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ver-user',
@@ -23,12 +23,12 @@ export class VerUserComponent {
   ];
   
   constructor(
-    //private router: Router
+    private router: Router
   ){}
 
   editarUsuario(usuario:any){
     console.log('Usuario a editar', usuario);
-    //this.router.navigate(['/usuario/'+usuario.id+'/Editar']);
+    this.router.navigateByUrl('/usuario/'+usuario.id+'/Editar') // navigate(['/usuario/'+usuario.id+'/Editar']);
 
   }
   
